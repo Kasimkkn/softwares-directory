@@ -10,10 +10,10 @@ interface SearchWithSuggestionsProps {
   placeholder?: string;
 }
 
-const SearchWithSuggestions = ({ 
-  searchQuery, 
-  onSearchChange, 
-  suggestions, 
+const SearchWithSuggestions = ({
+  searchQuery,
+  onSearchChange,
+  suggestions,
   placeholder = "Search industries, software types, or companies..."
 }: SearchWithSuggestionsProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const SearchWithSuggestions = ({
   useEffect(() => {
     if (searchQuery.length > 0) {
       const filtered = suggestions
-        .filter(suggestion => 
+        .filter(suggestion =>
           suggestion.toLowerCase().includes(searchQuery.toLowerCase())
         )
         .slice(0, 8); // Limit to 8 suggestions
@@ -57,7 +57,7 @@ const SearchWithSuggestions = ({
   };
 
   return (
-    <div ref={searchRef} className="relative flex-1 max-w-xl mx-8">
+    <div ref={searchRef} className="relative flex-1 max-w-xl md:mx-8">
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input

@@ -1,7 +1,6 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Globe2, Zap, DollarSign, BarChart3, Users, ArrowUpRight, Github, ExternalLink } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { BarChart3, DollarSign, ExternalLink, Github, Globe2, TrendingUp, Users, Zap } from "lucide-react";
 
 import businessData from "@/data/business-software.json";
 
@@ -58,8 +57,8 @@ const AnalyticsSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
-      <div className="container mx-auto relative">
-        <div className="text-center mb-16">
+      <div className="md:container md:mx-auto relative">
+        <div className="md:text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <BarChart3 className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Market Intelligence</span>
@@ -77,7 +76,7 @@ const AnalyticsSection = () => {
 
         <div className="grid grid-cols-1 gap-8 mb-12">
           {/* High Growth Sectors */}
-          <Card className="p-8 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
+          <Card className="py-4 px-2 md:p-8 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl" />
 
             <div className="relative">
@@ -86,7 +85,7 @@ const AnalyticsSection = () => {
                   <TrendingUp className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">High Growth Sectors 2025</h3>
+                  <h3 className="text-base md:text-xl font-bold text-foreground">High Growth Sectors 2025</h3>
                   <p className="text-sm text-muted-foreground">Top {growthSectors.length} fastest growing industries</p>
                 </div>
               </div>
@@ -110,11 +109,10 @@ const AnalyticsSection = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex max-md:flex-col items-center gap-3">
                           <div className="text-right">
                             <div className="text-lg font-bold text-primary">{sector.growth}</div>
                           </div>
-                          <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                         </div>
                       </div>
                     </div>
@@ -128,15 +126,17 @@ const AnalyticsSection = () => {
         {/* Additional Data Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Emerging Technologies */}
-          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-purple-500/10">
-                <Zap className="h-4 w-4 text-purple-400" />
+          <Card className="py-4 px-2 md:p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-purple-500/10">
+                  <Zap className="h-4 w-4 text-purple-400" />
+                </div>
+                <h4 className="font-semibold text-foreground">Emerging Tech</h4>
               </div>
-              <h4 className="font-semibold text-foreground">Emerging Tech</h4>
-            </div>
-            <div className="text-2xl font-bold text-purple-400 mb-2">
-              {market_insights.emerging_tech_categories.length}+
+              <div className="text-2xl font-bold text-purple-400 mb-2">
+                {market_insights.emerging_tech_categories.length}+
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
               Next-gen technologies including {market_insights.emerging_tech_categories.slice(0, 2).join(", ")}
@@ -144,15 +144,17 @@ const AnalyticsSection = () => {
           </Card>
 
           {/* Geographic Markets */}
-          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-blue-500/10">
-                <Globe2 className="h-4 w-4 text-blue-400" />
+          <Card className="py-4 px-2 md:p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-blue-500/10">
+                  <Globe2 className="h-4 w-4 text-blue-400" />
+                </div>
+                <h4 className="font-semibold text-foreground">Global Markets</h4>
               </div>
-              <h4 className="font-semibold text-foreground">Global Markets</h4>
-            </div>
-            <div className="text-2xl font-bold text-blue-400 mb-2">
-              {market_insights.geographic_opportunities.developing_markets.length}
+              <div className="text-2xl font-bold text-blue-400 mb-2">
+                {market_insights.geographic_opportunities.developing_markets.length}
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
               High-potential markets: {market_insights.geographic_opportunities.developing_markets.slice(0, 2).join(", ")}
@@ -160,15 +162,17 @@ const AnalyticsSection = () => {
           </Card>
 
           {/* Business Categories */}
-          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-yellow-500/10">
-                <BarChart3 className="h-4 w-4 text-yellow-400" />
+          <Card className="py-4 px-2 md:p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-yellow-500/10">
+                  <BarChart3 className="h-4 w-4 text-yellow-400" />
+                </div>
+                <h4 className="font-semibold text-foreground">Business Scales</h4>
               </div>
-              <h4 className="font-semibold text-foreground">Business Scales</h4>
-            </div>
-            <div className="text-2xl font-bold text-yellow-400 mb-2">
-              4
+              <div className="text-2xl font-bold text-yellow-400 mb-2">
+                4
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
               From micro businesses to large enterprises
@@ -179,7 +183,7 @@ const AnalyticsSection = () => {
         {/* Detailed Breakdown */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Untapped Markets Detail */}
-          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
+          <Card className="py-4 px-2 md:p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl">🎯</span>
               <h4 className="font-semibold text-foreground">Untapped Opportunities</h4>
@@ -195,7 +199,7 @@ const AnalyticsSection = () => {
           </Card>
 
           {/* Challenges & Solutions */}
-          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
+          <Card className="py-4 px-2 md:p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl">⚡</span>
               <h4 className="font-semibold text-foreground">Key Challenges</h4>
@@ -213,9 +217,9 @@ const AnalyticsSection = () => {
       </div>
 
       {/* CTA Section */}
-      <Card className="p-8 bg-gradient-to-r from-primary/5 via-background to-accent/5 border-border/50 text-center">
-        <div className="max-w-2xl mx-auto">
-          <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+      <Card className="py-4 px-2 md:p-8 bg-gradient-to-r from-primary/5 via-background to-accent/5 border-border/50 md:text-center">
+        <div className="md:max-w-2xl md:mx-auto">
+          <Users className="h-12 w-12 text-primary md:mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-foreground mb-4">
             Join the Community
           </h3>

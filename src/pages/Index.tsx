@@ -1,17 +1,18 @@
-import { useState, useMemo } from "react";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
 import AnalyticsSection from "@/components/AnalyticsSection";
 import FilterSidebar from "@/components/FilterSidebar";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import IndustryCard from "@/components/IndustryCard";
 import IndustryModal from "@/components/IndustryModal";
-import Footer from "@/components/Footer";
 import { IndustryGridSkeleton } from "@/components/SkeletonLoaders";
-import { Search, Filter, LayoutGrid, List, SortAsc } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import useLenis from "@/hooks/useLenis";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import businessData from "@/data/business-software.json";
+import useLenis from "@/hooks/useLenis";
+import { Filter, Search, Sparkles } from "lucide-react";
+import { useMemo, useState } from "react";
 
 const Index = () => {
   // Initialize smooth scrolling
@@ -52,15 +53,46 @@ const Index = () => {
   // Extract filter options
   const filterOptions = useMemo(() => {
     const locations = [...new Set(industries.flatMap(ind => ind.target_locations))];
-    const categories = [...new Set(industries.map(ind => {
-      if (ind.industry.toLowerCase().includes('tech')) return 'Technology';
-      if (ind.industry.toLowerCase().includes('health')) return 'Healthcare';
-      if (ind.industry.toLowerCase().includes('food')) return 'Food & Beverage';
-      if (ind.industry.toLowerCase().includes('education')) return 'Education';
-      if (ind.industry.toLowerCase().includes('retail')) return 'Retail';
-      if (ind.industry.toLowerCase().includes('finance')) return 'Finance';
-      return 'Other';
-    }))];
+
+    // Create categories based on actual data structure keys
+    const categoryMapping: { [key: string]: string } = {
+      'retail_wholesale': 'Retail & Commerce',
+      'food_beverage': 'Food & Beverage',
+      'hospitality': 'Hospitality & Tourism',
+      'construction': 'Construction & Engineering',
+      'healthcare': 'Healthcare & Medical',
+      'education': 'Education & Training',
+      'beauty_wellness': 'Beauty & Wellness',
+      'logistics_transport': 'Logistics & Transport',
+      'manufacturing': 'Manufacturing & Industrial',
+      'agriculture': 'Agriculture & Farming',
+      'automotive': 'Automotive Services',
+      'professional_services': 'Professional Services',
+      'real_estate': 'Real Estate',
+      'travel_tourism': 'Travel & Tourism',
+      'religious_social': 'Religious & Social',
+      'personal_services': 'Personal Services',
+      'entertainment_media': 'Entertainment & Media',
+      'retail_specialty': 'Specialty Retail',
+      'wealthtech': 'Wealth & Finance',
+      'govtech': 'Government & Public',
+      'retailtech': 'Retail Technology',
+      'adtech_martech': 'Marketing & Advertising',
+      'traveltech': 'Travel Technology',
+      'sporttech': 'Sports & Fitness',
+      'femtech': `Women's Health`,
+      'pettech': 'Pet & Animal Care',
+      'biotech': 'Biotechnology',
+      'spacetech': 'Space & Aerospace',
+      'mobilitytech': 'Mobility & Transport',
+      'gaming_esports': 'Gaming & eSports'
+    };
+
+    // Get categories from the actual data structure
+    const dataCategories = Object.keys(businessData.industry_specific_software);
+    const categories = [...new Set(dataCategories.map(key =>
+      categoryMapping[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    ))];
 
     return {
       locations: locations.sort(),
@@ -76,7 +108,6 @@ const Index = () => {
         industry.business_types.some(type => type.toLowerCase().includes(searchQuery.toLowerCase())) ||
         industry.software_features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase())) ||
         industry.examples.some(example => example.toLowerCase().includes(searchQuery.toLowerCase()));
-
 
       const matchesLocation = activeFilters.locations.length === 0 ||
         activeFilters.locations.some(loc => industry.target_locations.includes(loc));
@@ -122,67 +153,45 @@ const Index = () => {
       />
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar */}
-          <div className="lg:w-80 flex-shrink-0">
+      <main id="industries-section" className="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Sidebar - Responsive width */}
+          <aside className="lg:w-80 xl:w-96 flex-shrink-0">
             <FilterSidebar
               filters={filterOptions}
               activeFilters={activeFilters}
               onFilterChange={handleFilterChange}
               onClearFilters={handleClearFilters}
             />
-          </div>
+          </aside>
 
           {/* Main Content Area */}
           <div className="flex-1 min-w-0">
-            {/* Results Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            {/* Results Header - Mobile optimized */}
+            <div className="flex flex-col gap-4 mb-6 sm:mb-8">
+              {/* Title and Stats */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">
-                  Business Software Directory
-                </h2>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span>
-                    Showing <span className="font-semibold text-foreground">{filteredIndustries.length}</span> of {industries.length} industries
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl text-white font-bold">Software Directory</span>
+                  </div>
+
                   {getTotalActiveFilters() > 0 && (
-                    <Badge className="bg-primary/10 text-primary border-primary/20">
-                      {getTotalActiveFilters()} filters active
+                    <Badge className="bg-primary/10 text-primary border-primary/20 w-fit">
+                      <Filter className="h-3 w-3 mr-1" />
+                      {getTotalActiveFilters()} filter{getTotalActiveFilters() !== 1 ? 's' : ''} active
                     </Badge>
                   )}
                 </div>
               </div>
-
-              {/* View Controls */}
-              <div className="flex items-center gap-2">
-                <div className="flex items-center border border-border/50 rounded-lg p-1 bg-card/50">
-                  <Button
-                    variant={viewMode === 'grid' ? 'default' : 'ghost'}
-                    size="sm"
-                    onClick={() => setViewMode('grid')}
-                    className="h-8 px-3"
-                  >
-                    <LayoutGrid className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant={viewMode === 'list' ? 'default' : 'ghost'}
-                    size="sm"
-                    onClick={() => setViewMode('list')}
-                    className="h-8 px-3"
-                  >
-                    <List className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
             </div>
 
-            {/* Industries Grid/List */}
+            {/* Industries Grid/List - Responsive layout */}
             {isLoading ? (
               <IndustryGridSkeleton count={6} />
             ) : filteredIndustries.length > 0 ? (
-              <div className={`grid gap-6 ${viewMode === 'grid'
-                ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+              <div className={`grid gap-4 sm:gap-6 ${viewMode === 'grid'
+                ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3'
                 : 'grid-cols-1'
                 }`}>
                 {filteredIndustries.map((industry, index) => (
@@ -194,59 +203,50 @@ const Index = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16">
-                <div className="max-w-md mx-auto">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-muted/50 flex items-center justify-center">
-                    <Search className="h-8 w-8 text-muted-foreground" />
+              /* Empty State - Mobile optimized */
+              <Card className="text-center py-12 sm:py-16 bg-gradient-card border-border/50">
+                <div className="max-w-md mx-auto px-4">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                    <Search className="h-8 w-8 sm:h-10 sm:w-10 text-muted-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                     No industries found
                   </h3>
-                  <p className="text-muted-foreground mb-6">
-                    Try adjusting your search terms or filters to discover more business software categories.
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+                    <span className="hidden sm:inline">
+                      Try adjusting your search terms or filters to discover more business software categories.
+                    </span>
+                    <span className="sm:hidden">
+                      Try different search terms or clear filters to find more results.
+                    </span>
                   </p>
                   <div className="space-y-3">
                     <Button
                       onClick={handleClearFilters}
                       variant="outline"
                       className="w-full border-border/50 hover:bg-card"
+                      disabled={getTotalActiveFilters() === 0}
                     >
                       <Filter className="h-4 w-4 mr-2" />
                       Clear all filters
                     </Button>
-                    <p className="text-sm text-muted-foreground">or</p>
+                    <div className="text-xs sm:text-sm text-muted-foreground">or</div>
                     <Button
                       onClick={() => window.open('https://github.com', '_blank')}
                       className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
                     >
-                      Contribute this industry
+                      <Sparkles className="h-4 w-4 mr-2" />
+                      <span className="hidden sm:inline">Contribute this industry</span>
+                      <span className="sm:hidden">Add Industry</span>
                     </Button>
                   </div>
                 </div>
-              </div>
+              </Card>
             )}
 
-            {/* Load More / Pagination could go here */}
-            {filteredIndustries.length > 0 && (
-              <div className="mt-12 text-center">
-                <div className="inline-flex items-center gap-4 p-4 bg-card/50 border border-border/50 rounded-lg">
-                  <span className="text-sm text-muted-foreground">
-                    Found everything you need?
-                  </span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => window.open('https://github.com', '_blank')}
-                    className="border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30"
-                  >
-                    Add Missing Industry
-                  </Button>
-                </div>
-              </div>
-            )}
           </div>
         </div>
-      </div>
+      </main>
 
       {/* Analytics Section */}
       <AnalyticsSection />

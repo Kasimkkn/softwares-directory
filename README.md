@@ -1,7 +1,7 @@
 # Business Software Directory 🚀
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Industries-65+-blue" alt="Industries Count" />
+  <img src="https://img.shields.io/badge/Industries-95+-blue" alt="Industries Count" />
   <img src="https://img.shields.io/badge/Categories-8+-green" alt="Categories Count" />
   <img src="https://img.shields.io/badge/Version-2.0-orange" alt="Version" />
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License" />
@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-  <h3>A comprehensive, open-source database of business software categories across 65+ industries</h3>
+  <h3>A comprehensive, open-source database of business software categories across 95+ industries</h3>
   <p>From FinTech to SpaceTech, discover software solutions for every business vertical</p>
   
   [🌐 Live Demo](https://your-app-url.vercel.app) • [📖 Documentation](./docs) • [🤝 Contribute](./CONTRIBUTING.md) • [📊 Data Schema](./src/data/schema.md)
@@ -19,7 +19,7 @@
 
 ## 🎯 Overview
 
-The **Business Software Directory** is a modern, responsive web application that showcases a comprehensive database of business software categories across 65+ industries. Whether you're an entrepreneur looking for software solutions, an investor researching market opportunities, or a developer exploring new verticals, this directory provides valuable insights into the software landscape.
+The **Business Software Directory** is a modern, responsive web application that showcases a comprehensive database of business software categories across 95+ industries. Whether you're an entrepreneur looking for software solutions, an investor researching market opportunities, or a developer exploring new verticals, this directory provides valuable insights into the software landscape.
 
 ### ✨ Key Features
 
@@ -85,7 +85,7 @@ npm run preview
 
 Our comprehensive database includes:
 
-### 🏢 Industry Categories (65+)
+### 🏢 Industry Categories (95+)
 - **FinTech** - Digital banking, payments, lending platforms
 - **HealthTech** - Telemedicine, health monitoring, medical devices
 - **EdTech** - Online learning, educational platforms, student management

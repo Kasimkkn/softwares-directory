@@ -42,7 +42,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Comprehensive database of business software across 65+ industries. 
+              Comprehensive database of business software across 95+ industries.
               Built by the community, for the community.
             </p>
             <div className="flex items-center space-x-4">
@@ -120,7 +120,7 @@ const Footer = () => {
             <span>•</span>
             <span>Last Updated: July 30, 2025</span>
           </div>
-          
+
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
             <span>Made with</span>
             <Heart className="h-4 w-4 text-red-500" />
@@ -131,7 +131,7 @@ const Footer = () => {
         {/* Stats Bar */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="text-center p-4 rounded-lg bg-background border border-border">
-            <div className="text-2xl font-bold text-primary">65+</div>
+            <div className="text-2xl font-bold text-primary">95+</div>
             <div className="text-xs text-muted-foreground">Industries</div>
           </div>
           <div className="text-center p-4 rounded-lg bg-background border border-border">
