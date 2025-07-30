@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "title": "Complete Business Software Categories Database",
+    "description": "Comprehensive database of business software types categorized by industry and business scale",
+    "version": "2.0",
+    "last_updated": "2025-07-30",
+    "total_categories": 8,
+    "total_industries": 65,
+    "target_markets": ["local", "rural", "urban", "small_business", "medium_business", "enterprise", "global"]
+  },
+  "general_business_software": {
+    "category": "Universal Business Tools",
+    "description": "Software applicable across all industries and business scales",
+    "software_types": [
+      {
+        "name": "Billing & Invoicing Software",
+        "features": ["POS systems", "GST-compliant billing", "Multi-mode payment tracking"],
+        "examples": ["Vyapar", "Zoho Invoice", "Tally", "QuickBooks"],
+        "target_business_size": ["small", "medium", "large"]
+      },
+      {
+        "name": "Inventory & Stock Management",
+        "features": ["Real-time stock tracking", "Low stock alerts", "Purchase/sales history"],
+        "examples": ["Zoho Inventory", "Marg ERP", "Sortly"],
+        "target_business_size": ["small", "medium", "large"]
+      },
+      {
+        "name": "Order Management",
+        "features": ["Order tracking", "Payment status", "Returns/exchange module"],
+        "examples": ["Custom solutions", "ERP modules"],
+        "target_business_size": ["small", "medium", "large"]
+      },
+      {
+        "name": "Customer Relationship Management (CRM)",
+        "features": ["Lead management", "Customer database", "Follow-up automation"],
+        "examples": ["Zoho CRM", "Salesforce", "HubSpot"],
+        "target_business_size": ["small", "medium", "large"]
+      },
+      {
+        "name": "Supplier & Dealer Management",
+        "features": ["Contact management", "Purchase orders", "Payment and credit tracking"],
+        "examples": ["ERP systems", "Custom solutions"],
+        "target_business_size": ["medium", "large"]
+      },
+      {
+        "name": "Reports & Analytics",
+        "features": ["Daily/weekly/monthly summaries", "Profit/loss statements", "Sales trends", "Product performance"],
+        "examples": ["Business Intelligence tools", "ERP reporting modules"],
+        "target_business_size": ["small", "medium", "large"]
+      },
+      {
+        "name": "Accounting & Finance",
+        "features": ["Bank reconciliation", "Ledger entries", "Expense management", "GST filing"],
+        "examples": ["Tally", "Zoho Books", "QuickBooks"],
+        "target_business_size": ["small", "medium", "large"]
+      }
+    ]
+  },
+  "industry_specific_software": {
+    "retail_wholesale": {
+      "industry": "Retail & Wholesale",
+      "business_types": ["Retail stores", "Wholesale distributors", "Kirana stores", "General stores"],
+      "software_features": ["POS + Barcode Scanning", "Loyalty program software", "E-commerce integrations", "Purchase return and damage tracking"],
+      "examples": ["Dukaan", "Khatabook", "OkCredit"],
+      "target_locations": ["urban", "rural", "semi-urban"],
+      "growth_potential": "High"
+    },
+    "food_beverage": {
+      "industry": "Food & Beverage",
+      "business_types": ["Restaurants", "Cafes", "Food trucks", "Tiffin services", "Home-based food sellers", "Home bakers"],
+      "software_features": ["Restaurant POS", "Table reservation system", "Kitchen display system (KDS)", "Food delivery order management", "Recipe & food costing software", "Menu planner", "Daily order count", "Subscription management"],
+      "examples": ["Petpooja", "POSist", "Zoho Restaurant"],
+      "target_locations": ["urban", "semi-urban", "local"],
+      "growth_potential": "Very High"
+    },
+    "hospitality": {
+      "industry": "Hotel & Hospitality",
+      "business_types": ["Hotels", "Guesthouses", "Banquet halls", "Event venues"],
+      "software_features": ["Hotel room booking engine", "Banquet/event booking", "Front desk management", "Housekeeping & room service tracking", "Channel manager"],
+      "examples": ["eZee FrontDesk", "OYO OS", "Hotelogix"],
+      "target_locations": ["urban", "tourist_destinations"],
+      "growth_potential": "High"
+    },
+    "construction": {
+      "industry": "Construction & Contractors",
+      "business_types": ["Construction companies", "Contractors", "Welders", "Electricians", "Plumbers", "Civil work contractors"],
+      "software_features": ["Project management", "Material planning and tracking", "Vendor and contractor management", "Labor attendance and wage tracking", "On-site progress tracking", "Job calendar", "Service report", "Quotation and bill generation"],
+      "examples": ["Buildertrend", "CoConstruct"],
+      "target_locations": ["urban", "semi-urban", "rural"],
+      "growth_potential": "Medium"
+    },
+    "healthcare": {
+      "industry": "Healthcare & Medical",
+      "business_types": ["Clinics", "Hospitals", "Pharmacies", "Medical stores", "Pathology labs", "Veterinary clinics"],
+      "software_features": ["Patient management system", "Appointment scheduling", "Prescription management", "Billing & insurance claims", "Lab reports and EMR", "Inventory with expiry tracking", "Drug database integration", "Test booking + Report upload"],
+      "examples": ["Practo", "Clinicea", "Medixcel", "Marg ERP", "RedBook", "MyBillBook"],
+      "target_locations": ["urban", "semi-urban", "rural"],
+      "growth_potential": "Very High"
+    },
+    "education": {
+      "industry": "Education & Training",
+      "business_types": ["Schools", "Colleges", "Coaching centers", "Private tutors", "Online coaches", "Daycare centers", "Martial arts schools", "Sports coaching"],
+      "software_features": ["Admission & fee management", "Student attendance", "Online class scheduling", "Assignment & exam management", "Staff payroll", "Session scheduler", "Student performance log", "Batch schedules"],
+      "examples": ["Teachmint", "MyClassCampus", "Fedena"],
+      "target_locations": ["urban", "semi-urban", "rural"],
+      "growth_potential": "High"
+    },
+    "beauty_wellness": {
+      "industry": "Beauty & Wellness",
+      "business_types": ["Salons", "Spas", "Barbershops", "Beauty product resellers", "Homemade beauty products"],
+      "software_features": ["Appointment booking", "Stylist/staff allocation", "Inventory of products", "Package and membership management", "Customer reviews & loyalty", "Walk-in queue tracking"],
+      "examples": ["Salonist", "Yocale", "Booksy", "Fresha"],
+      "target_locations": ["urban", "semi-urban", "local"],
+      "growth_potential": "Medium"
+    },
+    "logistics_transport": {
+      "industry": "Logistics & Transport",
+      "business_types": ["Logistics companies", "Transport businesses", "Packers & movers", "Courier services", "Vehicle rental", "Water tanker suppliers", "Gas agencies"],
+      "software_features": ["Fleet management", "Trip & route tracking", "Fuel and maintenance records", "Driver management", "Delivery proof", "Quote generation", "Pickup/drop inventory", "Order tracking", "Cash-on-delivery ledger"],
+      "examples": ["Fleetx", "Locus", "Movegistics", "Supermove"],
+      "target_locations": ["urban", "semi-urban", "rural"],
+      "growth_potential": "High"
+    },
+    "manufacturing": {
+      "industry": "Manufacturing & Industrial",
+      "business_types": ["Manufacturing companies", "Industrial businesses", "Garment manufacturers", "Furniture shops", "Local carpenters", "Tools & hardware shops"],
+      "software_features": ["ERP systems", "Production planning", "Raw material stock tracking", "Machine maintenance records", "Quality checks", "Product catalog system", "Custom order manager", "Material purchase log"],
+      "examples": ["Odoo", "SAP", "Oracle ERP"],
+      "target_locations": ["urban", "industrial_areas"],
+      "growth_potential": "Medium"
+    },
+    "agriculture": {
+      "industry": "Agriculture & Farming",
+      "business_types": ["Farmers", "Dairy businesses", "Poultry farms", "Fisheries", "Livestock management", "Tractor dealers"],
+      "software_features": ["Farm management systems", "Crop planning", "Pesticide usage tracking", "Livestock management", "Milk collection and delivery tracking", "Feed inventory", "Water quality monitoring", "Rental booking software"],
+      "examples": ["DeHaat", "KhetiGaadi", "FarmERP", "Stellapps", "Mr. Milkman"],
+      "target_locations": ["rural", "semi-urban"],
+      "growth_potential": "High"
+    },
+    "fintech": {
+      "industry": "Financial Technology",
+      "business_types": ["Digital payments", "Lending platforms", "Investment apps", "Insurance tech", "Cryptocurrency exchanges"],
+      "software_features": ["Payment processing", "KYC automation", "Risk assessment", "Blockchain integration", "Robo-advisory", "Digital wallets"],
+      "examples": ["Paytm", "PhonePe", "Razorpay", "Zerodha", "PolicyBazaar"],
+      "target_locations": ["global", "urban"],
+      "growth_potential": "Very High"
+    },
+    "edtech": {
+      "industry": "Educational Technology",
+      "business_types": ["Online learning platforms", "Language learning", "Skill development", "Test prep", "Corporate training"],
+      "software_features": ["LMS systems", "Virtual classrooms", "Assessment tools", "Content management", "Progress tracking", "Gamification"],
+      "examples": ["BYJU'S", "Unacademy", "Coursera", "Udemy", "Khan Academy"],
+      "target_locations": ["global", "urban", "semi-urban"],
+      "growth_potential": "Very High"
+    },
+    "healthtech": {
+      "industry": "Healthcare Technology",
+      "business_types": ["Telemedicine", "Health monitoring", "Mental health", "Fitness apps", "Medical devices"],
+      "software_features": ["Telehealth platforms", "Patient portals", "Health tracking", "AI diagnostics", "Prescription management", "Medical records"],
+      "examples": ["Practo", "1mg", "Cure.fit", "Tata 1mg", "Apollo 24/7"],
+      "target_locations": ["global", "urban", "semi-urban"],
+      "growth_potential": "Very High"
+    },
+    "cleantech": {
+      "industry": "Clean Technology",
+      "business_types": ["Solar energy", "Wind power", "Energy storage", "Smart grids", "Carbon tracking"],
+      "software_features": ["Energy monitoring", "Carbon footprint tracking", "Smart grid management", "Renewable energy optimization", "Sustainability reporting"],
+      "examples": ["Tesla Energy", "Enphase", "Solaredge", "Carbon Trust"],
+      "target_locations": ["global", "urban", "industrial"],
+      "growth_potential": "Very High"
+    }
+  }
+}
