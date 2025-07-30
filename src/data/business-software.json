@@ -2,11 +2,19 @@
   "metadata": {
     "title": "Complete Business Software Categories Database",
     "description": "Comprehensive database of business software types categorized by industry and business scale",
-    "version": "2.0",
+    "version": "3.0",
     "last_updated": "2025-07-30",
     "total_categories": 8,
-    "total_industries": 65,
-    "target_markets": ["local", "rural", "urban", "small_business", "medium_business", "enterprise", "global"]
+    "total_industries": 95,
+    "target_markets": [
+      "local",
+      "rural",
+      "urban",
+      "small_business",
+      "medium_business",
+      "enterprise",
+      "global"
+    ]
   },
   "general_business_software": {
     "category": "Universal Business Tools",
@@ -14,160 +22,2112 @@
     "software_types": [
       {
         "name": "Billing & Invoicing Software",
-        "features": ["POS systems", "GST-compliant billing", "Multi-mode payment tracking"],
-        "examples": ["Vyapar", "Zoho Invoice", "Tally", "QuickBooks"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "POS systems",
+          "GST-compliant billing",
+          "Multi-mode payment tracking"
+        ],
+        "examples": [
+          "Vyapar",
+          "Zoho Invoice",
+          "Tally",
+          "QuickBooks"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Inventory & Stock Management",
-        "features": ["Real-time stock tracking", "Low stock alerts", "Purchase/sales history"],
-        "examples": ["Zoho Inventory", "Marg ERP", "Sortly"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "Real-time stock tracking",
+          "Low stock alerts",
+          "Purchase/sales history"
+        ],
+        "examples": [
+          "Zoho Inventory",
+          "Marg ERP",
+          "Sortly"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Order Management",
-        "features": ["Order tracking", "Payment status", "Returns/exchange module"],
-        "examples": ["Custom solutions", "ERP modules"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "Order tracking",
+          "Payment status",
+          "Returns/exchange module"
+        ],
+        "examples": [
+          "Custom solutions",
+          "ERP modules"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Customer Relationship Management (CRM)",
-        "features": ["Lead management", "Customer database", "Follow-up automation"],
-        "examples": ["Zoho CRM", "Salesforce", "HubSpot"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "Lead management",
+          "Customer database",
+          "Follow-up automation"
+        ],
+        "examples": [
+          "Zoho CRM",
+          "Salesforce",
+          "HubSpot"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Supplier & Dealer Management",
-        "features": ["Contact management", "Purchase orders", "Payment and credit tracking"],
-        "examples": ["ERP systems", "Custom solutions"],
-        "target_business_size": ["medium", "large"]
+        "features": [
+          "Contact management",
+          "Purchase orders",
+          "Payment and credit tracking"
+        ],
+        "examples": [
+          "ERP systems",
+          "Custom solutions"
+        ],
+        "target_business_size": [
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Reports & Analytics",
-        "features": ["Daily/weekly/monthly summaries", "Profit/loss statements", "Sales trends", "Product performance"],
-        "examples": ["Business Intelligence tools", "ERP reporting modules"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "Daily/weekly/monthly summaries",
+          "Profit/loss statements",
+          "Sales trends",
+          "Product performance"
+        ],
+        "examples": [
+          "Business Intelligence tools",
+          "ERP reporting modules"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       },
       {
         "name": "Accounting & Finance",
-        "features": ["Bank reconciliation", "Ledger entries", "Expense management", "GST filing"],
-        "examples": ["Tally", "Zoho Books", "QuickBooks"],
-        "target_business_size": ["small", "medium", "large"]
+        "features": [
+          "Bank reconciliation",
+          "Ledger entries",
+          "Expense management",
+          "GST filing"
+        ],
+        "examples": [
+          "Tally",
+          "Zoho Books",
+          "QuickBooks"
+        ],
+        "target_business_size": [
+          "small",
+          "medium",
+          "large"
+        ]
       }
     ]
   },
   "industry_specific_software": {
     "retail_wholesale": {
       "industry": "Retail & Wholesale",
-      "business_types": ["Retail stores", "Wholesale distributors", "Kirana stores", "General stores"],
-      "software_features": ["POS + Barcode Scanning", "Loyalty program software", "E-commerce integrations", "Purchase return and damage tracking"],
-      "examples": ["Dukaan", "Khatabook", "OkCredit"],
-      "target_locations": ["urban", "rural", "semi-urban"],
-      "growth_potential": "High"
+      "business_types": [
+        "Retail stores",
+        "Wholesale distributors",
+        "Kirana stores",
+        "General stores"
+      ],
+      "software_features": [
+        "POS + Barcode Scanning",
+        "Loyalty program software",
+        "E-commerce integrations",
+        "Purchase return and damage tracking"
+      ],
+      "examples": [
+        "Dukaan",
+        "Khatabook",
+        "OkCredit"
+      ],
+      "target_locations": [
+        "urban",
+        "rural",
+        "semi-urban"
+      ]
     },
     "food_beverage": {
       "industry": "Food & Beverage",
-      "business_types": ["Restaurants", "Cafes", "Food trucks", "Tiffin services", "Home-based food sellers", "Home bakers"],
-      "software_features": ["Restaurant POS", "Table reservation system", "Kitchen display system (KDS)", "Food delivery order management", "Recipe & food costing software", "Menu planner", "Daily order count", "Subscription management"],
-      "examples": ["Petpooja", "POSist", "Zoho Restaurant"],
-      "target_locations": ["urban", "semi-urban", "local"],
-      "growth_potential": "Very High"
+      "business_types": [
+        "Restaurants",
+        "Cafes",
+        "Food trucks",
+        "Tiffin services",
+        "Home-based food sellers",
+        "Home bakers"
+      ],
+      "software_features": [
+        "Restaurant POS",
+        "Table reservation system",
+        "Kitchen display system (KDS)",
+        "Food delivery order management",
+        "Recipe & food costing software",
+        "Menu planner",
+        "Daily order count",
+        "Subscription management"
+      ],
+      "examples": [
+        "Petpooja",
+        "POSist",
+        "Zoho Restaurant"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "local"
+      ]
     },
     "hospitality": {
       "industry": "Hotel & Hospitality",
-      "business_types": ["Hotels", "Guesthouses", "Banquet halls", "Event venues"],
-      "software_features": ["Hotel room booking engine", "Banquet/event booking", "Front desk management", "Housekeeping & room service tracking", "Channel manager"],
-      "examples": ["eZee FrontDesk", "OYO OS", "Hotelogix"],
-      "target_locations": ["urban", "tourist_destinations"],
-      "growth_potential": "High"
+      "business_types": [
+        "Hotels",
+        "Guesthouses",
+        "Banquet halls",
+        "Event venues"
+      ],
+      "software_features": [
+        "Hotel room booking engine",
+        "Banquet/event booking",
+        "Front desk management",
+        "Housekeeping & room service tracking",
+        "Channel manager"
+      ],
+      "examples": [
+        "eZee FrontDesk",
+        "OYO OS",
+        "Hotelogix"
+      ],
+      "target_locations": [
+        "urban",
+        "tourist_destinations"
+      ]
     },
     "construction": {
       "industry": "Construction & Contractors",
-      "business_types": ["Construction companies", "Contractors", "Welders", "Electricians", "Plumbers", "Civil work contractors"],
-      "software_features": ["Project management", "Material planning and tracking", "Vendor and contractor management", "Labor attendance and wage tracking", "On-site progress tracking", "Job calendar", "Service report", "Quotation and bill generation"],
-      "examples": ["Buildertrend", "CoConstruct"],
-      "target_locations": ["urban", "semi-urban", "rural"],
-      "growth_potential": "Medium"
+      "business_types": [
+        "Construction companies",
+        "Contractors",
+        "Welders",
+        "Electricians",
+        "Plumbers",
+        "Civil work contractors"
+      ],
+      "software_features": [
+        "Project management",
+        "Material planning and tracking",
+        "Vendor and contractor management",
+        "Labor attendance and wage tracking",
+        "On-site progress tracking",
+        "Job calendar",
+        "Service report",
+        "Quotation and bill generation"
+      ],
+      "examples": [
+        "Buildertrend",
+        "CoConstruct"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "rural"
+      ]
     },
     "healthcare": {
       "industry": "Healthcare & Medical",
-      "business_types": ["Clinics", "Hospitals", "Pharmacies", "Medical stores", "Pathology labs", "Veterinary clinics"],
-      "software_features": ["Patient management system", "Appointment scheduling", "Prescription management", "Billing & insurance claims", "Lab reports and EMR", "Inventory with expiry tracking", "Drug database integration", "Test booking + Report upload"],
-      "examples": ["Practo", "Clinicea", "Medixcel", "Marg ERP", "RedBook", "MyBillBook"],
-      "target_locations": ["urban", "semi-urban", "rural"],
-      "growth_potential": "Very High"
+      "business_types": [
+        "Clinics",
+        "Hospitals",
+        "Pharmacies",
+        "Medical stores",
+        "Pathology labs",
+        "Veterinary clinics"
+      ],
+      "software_features": [
+        "Patient management system",
+        "Appointment scheduling",
+        "Prescription management",
+        "Billing & insurance claims",
+        "Lab reports and EMR",
+        "Inventory with expiry tracking",
+        "Drug database integration",
+        "Test booking + Report upload"
+      ],
+      "examples": [
+        "Practo",
+        "Clinicea",
+        "Medixcel",
+        "Marg ERP",
+        "RedBook",
+        "MyBillBook"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "rural"
+      ]
     },
     "education": {
       "industry": "Education & Training",
-      "business_types": ["Schools", "Colleges", "Coaching centers", "Private tutors", "Online coaches", "Daycare centers", "Martial arts schools", "Sports coaching"],
-      "software_features": ["Admission & fee management", "Student attendance", "Online class scheduling", "Assignment & exam management", "Staff payroll", "Session scheduler", "Student performance log", "Batch schedules"],
-      "examples": ["Teachmint", "MyClassCampus", "Fedena"],
-      "target_locations": ["urban", "semi-urban", "rural"],
-      "growth_potential": "High"
+      "business_types": [
+        "Schools",
+        "Colleges",
+        "Coaching centers",
+        "Private tutors",
+        "Online coaches",
+        "Daycare centers",
+        "Martial arts schools",
+        "Sports coaching"
+      ],
+      "software_features": [
+        "Admission & fee management",
+        "Student attendance",
+        "Online class scheduling",
+        "Assignment & exam management",
+        "Staff payroll",
+        "Session scheduler",
+        "Student performance log",
+        "Batch schedules"
+      ],
+      "examples": [
+        "Teachmint",
+        "MyClassCampus",
+        "Fedena"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "rural"
+      ]
     },
     "beauty_wellness": {
       "industry": "Beauty & Wellness",
-      "business_types": ["Salons", "Spas", "Barbershops", "Beauty product resellers", "Homemade beauty products"],
-      "software_features": ["Appointment booking", "Stylist/staff allocation", "Inventory of products", "Package and membership management", "Customer reviews & loyalty", "Walk-in queue tracking"],
-      "examples": ["Salonist", "Yocale", "Booksy", "Fresha"],
-      "target_locations": ["urban", "semi-urban", "local"],
-      "growth_potential": "Medium"
+      "business_types": [
+        "Salons",
+        "Spas",
+        "Barbershops",
+        "Beauty product resellers",
+        "Homemade beauty products"
+      ],
+      "software_features": [
+        "Appointment booking",
+        "Stylist/staff allocation",
+        "Inventory of products",
+        "Package and membership management",
+        "Customer reviews & loyalty",
+        "Walk-in queue tracking"
+      ],
+      "examples": [
+        "Salonist",
+        "Yocale",
+        "Booksy",
+        "Fresha"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "local"
+      ]
     },
     "logistics_transport": {
       "industry": "Logistics & Transport",
-      "business_types": ["Logistics companies", "Transport businesses", "Packers & movers", "Courier services", "Vehicle rental", "Water tanker suppliers", "Gas agencies"],
-      "software_features": ["Fleet management", "Trip & route tracking", "Fuel and maintenance records", "Driver management", "Delivery proof", "Quote generation", "Pickup/drop inventory", "Order tracking", "Cash-on-delivery ledger"],
-      "examples": ["Fleetx", "Locus", "Movegistics", "Supermove"],
-      "target_locations": ["urban", "semi-urban", "rural"],
-      "growth_potential": "High"
+      "business_types": [
+        "Logistics companies",
+        "Transport businesses",
+        "Packers & movers",
+        "Courier services",
+        "Vehicle rental",
+        "Water tanker suppliers",
+        "Gas agencies"
+      ],
+      "software_features": [
+        "Fleet management",
+        "Trip & route tracking",
+        "Fuel and maintenance records",
+        "Driver management",
+        "Delivery proof",
+        "Quote generation",
+        "Pickup/drop inventory",
+        "Order tracking",
+        "Cash-on-delivery ledger"
+      ],
+      "examples": [
+        "Fleetx",
+        "Locus",
+        "Movegistics",
+        "Supermove"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "rural"
+      ]
     },
     "manufacturing": {
       "industry": "Manufacturing & Industrial",
-      "business_types": ["Manufacturing companies", "Industrial businesses", "Garment manufacturers", "Furniture shops", "Local carpenters", "Tools & hardware shops"],
-      "software_features": ["ERP systems", "Production planning", "Raw material stock tracking", "Machine maintenance records", "Quality checks", "Product catalog system", "Custom order manager", "Material purchase log"],
-      "examples": ["Odoo", "SAP", "Oracle ERP"],
-      "target_locations": ["urban", "industrial_areas"],
-      "growth_potential": "Medium"
+      "business_types": [
+        "Manufacturing companies",
+        "Industrial businesses",
+        "Garment manufacturers",
+        "Furniture shops",
+        "Local carpenters",
+        "Tools & hardware shops"
+      ],
+      "software_features": [
+        "ERP systems",
+        "Production planning",
+        "Raw material stock tracking",
+        "Machine maintenance records",
+        "Quality checks",
+        "Product catalog system",
+        "Custom order manager",
+        "Material purchase log"
+      ],
+      "examples": [
+        "Odoo",
+        "SAP",
+        "Oracle ERP"
+      ],
+      "target_locations": [
+        "urban",
+        "industrial_areas"
+      ]
     },
     "agriculture": {
       "industry": "Agriculture & Farming",
-      "business_types": ["Farmers", "Dairy businesses", "Poultry farms", "Fisheries", "Livestock management", "Tractor dealers"],
-      "software_features": ["Farm management systems", "Crop planning", "Pesticide usage tracking", "Livestock management", "Milk collection and delivery tracking", "Feed inventory", "Water quality monitoring", "Rental booking software"],
-      "examples": ["DeHaat", "KhetiGaadi", "FarmERP", "Stellapps", "Mr. Milkman"],
-      "target_locations": ["rural", "semi-urban"],
-      "growth_potential": "High"
+      "business_types": [
+        "Farmers",
+        "Dairy businesses",
+        "Poultry farms",
+        "Fisheries",
+        "Livestock management",
+        "Tractor dealers"
+      ],
+      "software_features": [
+        "Farm management systems",
+        "Crop planning",
+        "Pesticide usage tracking",
+        "Livestock management",
+        "Milk collection and delivery tracking",
+        "Feed inventory",
+        "Water quality monitoring",
+        "Rental booking software"
+      ],
+      "examples": [
+        "DeHaat",
+        "KhetiGaadi",
+        "FarmERP",
+        "Stellapps",
+        "Mr. Milkman"
+      ],
+      "target_locations": [
+        "rural",
+        "semi-urban"
+      ]
     },
-    "fintech": {
-      "industry": "Financial Technology",
-      "business_types": ["Digital payments", "Lending platforms", "Investment apps", "Insurance tech", "Cryptocurrency exchanges"],
-      "software_features": ["Payment processing", "KYC automation", "Risk assessment", "Blockchain integration", "Robo-advisory", "Digital wallets"],
-      "examples": ["Paytm", "PhonePe", "Razorpay", "Zerodha", "PolicyBazaar"],
-      "target_locations": ["global", "urban"],
-      "growth_potential": "Very High"
+    "automotive": {
+      "industry": "Automotive Services",
+      "business_types": [
+        "Auto garages",
+        "Mechanics",
+        "Car showrooms",
+        "Bike showrooms"
+      ],
+      "software_features": [
+        "Job card management",
+        "Spare parts inventory",
+        "Customer history",
+        "Service reminders",
+        "Vehicle tracking",
+        "RTO integration"
+      ],
+      "examples": [
+        "GaragePlug",
+        "Autorox"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban"
+      ]
     },
-    "edtech": {
-      "industry": "Educational Technology",
-      "business_types": ["Online learning platforms", "Language learning", "Skill development", "Test prep", "Corporate training"],
-      "software_features": ["LMS systems", "Virtual classrooms", "Assessment tools", "Content management", "Progress tracking", "Gamification"],
-      "examples": ["BYJU'S", "Unacademy", "Coursera", "Udemy", "Khan Academy"],
-      "target_locations": ["global", "urban", "semi-urban"],
-      "growth_potential": "Very High"
+    "professional_services": {
+      "industry": "Professional Services",
+      "business_types": [
+        "IT service providers",
+        "Freelancers",
+        "Interior designers",
+        "Architects",
+        "Legal firms",
+        "Chartered accountants",
+        "Tax consultants",
+        "Photographers",
+        "Videographers"
+      ],
+      "software_features": [
+        "Project/task tracking",
+        "Client communication & time logging",
+        "Proposal & invoice generation",
+        "Ticketing system",
+        "Quotation builder",
+        "Design proposals",
+        "Case tracking software",
+        "GST return software",
+        "Session booking system"
+      ],
+      "examples": [
+        "Trello",
+        "Jira",
+        "Freshdesk",
+        "Toggl",
+        "Houzz Pro",
+        "Foyr",
+        "Clio",
+        "PracticePanther",
+        "ClearTax",
+        "KDK Software"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban"
+      ]
     },
-    "healthtech": {
-      "industry": "Healthcare Technology",
-      "business_types": ["Telemedicine", "Health monitoring", "Mental health", "Fitness apps", "Medical devices"],
-      "software_features": ["Telehealth platforms", "Patient portals", "Health tracking", "AI diagnostics", "Prescription management", "Medical records"],
-      "examples": ["Practo", "1mg", "Cure.fit", "Tata 1mg", "Apollo 24/7"],
-      "target_locations": ["global", "urban", "semi-urban"],
-      "growth_potential": "Very High"
+    "real_estate": {
+      "industry": "Real Estate",
+      "business_types": [
+        "Real estate agents",
+        "Builders",
+        "Property dealers"
+      ],
+      "software_features": [
+        "Property listings manager",
+        "Lead capture CRM",
+        "Site visit scheduler",
+        "Payment plan tracker",
+        "RERA document storage"
+      ],
+      "examples": [
+        "NoBrokerHood",
+        "Sell.Do"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban"
+      ]
     },
-    "cleantech": {
-      "industry": "Clean Technology",
-      "business_types": ["Solar energy", "Wind power", "Energy storage", "Smart grids", "Carbon tracking"],
-      "software_features": ["Energy monitoring", "Carbon footprint tracking", "Smart grid management", "Renewable energy optimization", "Sustainability reporting"],
-      "examples": ["Tesla Energy", "Enphase", "Solaredge", "Carbon Trust"],
-      "target_locations": ["global", "urban", "industrial"],
-      "growth_potential": "Very High"
+    "travel_tourism": {
+      "industry": "Travel & Tourism",
+      "business_types": [
+        "Travel agencies",
+        "Tour operators",
+        "Ticketing services"
+      ],
+      "software_features": [
+        "Ticket booking",
+        "Tour package CRM",
+        "Hotel & transport integration",
+        "Payment and booking confirmation"
+      ],
+      "examples": [
+        "Travelopro",
+        "TripControl"
+      ],
+      "target_locations": [
+        "urban",
+        "tourist_destinations"
+      ]
+    },
+    "religious_social": {
+      "industry": "Religious & Social Services",
+      "business_types": [
+        "Religious trusts",
+        "Temples",
+        "Mosques",
+        "Gurudwaras",
+        "NGOs",
+        "SHGs",
+        "Animal shelters",
+        "Pujaris",
+        "Pandits",
+        "Astrologers"
+      ],
+      "software_features": [
+        "Donation and fund management",
+        "Online booking for services",
+        "Event scheduling",
+        "Member data tracking",
+        "Grant lifecycle software",
+        "Appointment booking",
+        "Online puja services",
+        "Animal intake logs"
+      ],
+      "examples": [
+        "eTemple",
+        "TempleSoft"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "rural"
+      ]
+    },
+    "personal_services": {
+      "industry": "Personal Services",
+      "business_types": [
+        "Laundry services",
+        "Dry cleaners",
+        "Cleaning services",
+        "Housekeeping agencies",
+        "Cobblers",
+        "Leather repair shops"
+      ],
+      "software_features": [
+        "Order intake and delivery management",
+        "Service type and pricing",
+        "Pick-up/drop-off scheduler",
+        "Tag-based order management",
+        "SMS alerts",
+        "Shift/house allocation"
+      ],
+      "examples": [
+        "Local service apps"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "local"
+      ]
+    },
+    "entertainment_media": {
+      "industry": "Entertainment & Media",
+      "business_types": [
+        "DJ services",
+        "Music bands",
+        "Local artists",
+        "Event planners"
+      ],
+      "software_features": [
+        "Event booking software",
+        "Calendar/schedule tracker",
+        "Equipment and client history log",
+        "Booking and scheduling",
+        "Payment tracking"
+      ],
+      "examples": [
+        "Custom booking solutions"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban"
+      ]
+    },
+    "retail_specialty": {
+      "industry": "Specialty Retail",
+      "business_types": [
+        "Street vendors",
+        "Cart sellers",
+        "Second-hand goods shops",
+        "Thrift shops",
+        "Pop-up exhibitions",
+        "Flea market sellers"
+      ],
+      "software_features": [
+        "Simple inventory app",
+        "Daily sales record",
+        "WhatsApp broadcast",
+        "Product listings",
+        "Condition-based pricing tool",
+        "Stock list",
+        "One-day event billing software"
+      ],
+      "examples": [
+        "Mobile apps",
+        "WhatsApp Business tools"
+      ],
+      "target_locations": [
+        "urban",
+        "semi-urban",
+        "local"
+      ]
+    },
+    "wealthtech": {
+      "industry": "Wealth Management Technology",
+      "business_types": [
+        "Robo-advisors",
+        "Wealth management platforms",
+        "Investment analytics",
+        "Portfolio management",
+        "Financial planning tools"
+      ],
+      "software_features": [
+        "Automated investment management",
+        "Portfolio analytics",
+        "Financial planning tools",
+        "Risk assessment",
+        "Client reporting",
+        "Compliance tracking"
+      ],
+      "examples": [
+        "Betterment",
+        "Wealthfront",
+        "Personal Capital",
+        "AdvisorEngine"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "high_income_areas"
+      ]
+    },
+    "govtech": {
+      "industry": "Government Technology",
+      "business_types": [
+        "Public sector software",
+        "Civic engagement platforms",
+        "Government services digitization",
+        "Smart city solutions",
+        "Public safety technology"
+      ],
+      "software_features": [
+        "Citizen service portals",
+        "Public records management",
+        "Digital identity verification",
+        "Smart city infrastructure",
+        "Emergency response systems",
+        "Public procurement platforms"
+      ],
+      "examples": [
+        "Tyler Technologies",
+        "Socrata",
+        "Citibeats",
+        "GovDelivery"
+      ],
+      "target_locations": [
+        "government_sectors",
+        "urban",
+        "smart_cities"
+      ]
+    },
+    "retailtech": {
+      "industry": "Retail Technology",
+      "business_types": [
+        "E-commerce platforms",
+        "Retail analytics",
+        "Supply chain optimization",
+        "Customer experience platforms",
+        "Omnichannel retail"
+      ],
+      "software_features": [
+        "E-commerce platforms",
+        "Inventory optimization",
+        "Customer analytics",
+        "Omnichannel management",
+        "Supply chain visibility",
+        "Personalization engines"
+      ],
+      "examples": [
+        "Shopify",
+        "Magento",
+        "Salesforce Commerce",
+        "BigCommerce"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "retail_hubs"
+      ]
+    },
+    "adtech_martech": {
+      "industry": "Advertising & Marketing Technology",
+      "business_types": [
+        "Digital advertising platforms",
+        "Marketing automation",
+        "Customer data platforms",
+        "Social media management",
+        "Content management"
+      ],
+      "software_features": [
+        "Programmatic advertising",
+        "Marketing automation",
+        "Customer segmentation",
+        "Social media management",
+        "Content optimization",
+        "Campaign analytics"
+      ],
+      "examples": [
+        "Google Ads",
+        "Facebook Ads Manager",
+        "HubSpot",
+        "Marketo",
+        "Adobe Marketing Cloud"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "digital_markets"
+      ]
+    },
+    "traveltech": {
+      "industry": "Travel Technology",
+      "business_types": [
+        "Online travel agencies",
+        "Hotel management systems",
+        "Transportation platforms",
+        "Travel expense management",
+        "Destination management"
+      ],
+      "software_features": [
+        "Booking engines",
+        "Revenue management",
+        "Travel planning",
+        "Expense tracking",
+        "Customer service automation",
+        "Dynamic pricing"
+      ],
+      "examples": [
+        "Expedia",
+        "Booking.com",
+        "Airbnb",
+        "Concur",
+        "TripActions"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "tourist_destinations"
+      ]
+    },
+    "sporttech": {
+      "industry": "Sports Technology",
+      "business_types": [
+        "Sports analytics",
+        "Fitness apps",
+        "Sports betting platforms",
+        "Team management software",
+        "Fan engagement platforms"
+      ],
+      "software_features": [
+        "Performance analytics",
+        "Team management",
+        "Fan engagement tools",
+        "Sports betting software",
+        "Fitness tracking",
+        "Event management"
+      ],
+      "examples": [
+        "Strava",
+        "TeamSnap",
+        "Hudl",
+        "DraftKings",
+        "Catapult Sports"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "sports_venues"
+      ]
+    },
+    "femtech": {
+      "industry": "Female Health Technology",
+      "business_types": [
+        "Women's health apps",
+        "Fertility tracking",
+        "Pregnancy monitoring",
+        "Menopause management",
+        "Reproductive health platforms"
+      ],
+      "software_features": [
+        "Menstrual cycle tracking",
+        "Fertility monitoring",
+        "Pregnancy apps",
+        "Telehealth for women",
+        "Hormone tracking",
+        "Wellness coaching"
+      ],
+      "examples": [
+        "Clue",
+        "Flo",
+        "Ovia",
+        "Maven",
+        "Glow"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "healthcare_focused"
+      ]
+    },
+    "pettech": {
+      "industry": "Pet Technology",
+      "business_types": [
+        "Pet care apps",
+        "Veterinary software",
+        "Pet insurance platforms",
+        "Pet tracking devices",
+        "Pet services platforms"
+      ],
+      "software_features": [
+        "Veterinary practice management",
+        "Pet health tracking",
+        "Pet insurance management",
+        "Pet services booking",
+        "GPS pet tracking",
+        "Pet social networks"
+      ],
+      "examples": [
+        "Rover",
+        "Wag",
+        "PetDesk",
+        "Whistle",
+        "Petplan"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "pet_friendly_areas"
+      ]
+    },
+    "biotech": {
+      "industry": "Biotechnology",
+      "business_types": [
+        "Pharmaceutical software",
+        "Laboratory information systems",
+        "Clinical trial management",
+        "Genomics platforms",
+        "Drug discovery platforms"
+      ],
+      "software_features": [
+        "Laboratory information management",
+        "Clinical trial software",
+        "Genomics analysis",
+        "Drug discovery platforms",
+        "Regulatory compliance",
+        "Research data management"
+      ],
+      "examples": [
+        "Veeva",
+        "Medidata",
+        "LabWare",
+        "Benchling",
+        "ClinCapture"
+      ],
+      "target_locations": [
+        "global",
+        "biotech_hubs",
+        "research_centers"
+      ]
+    },
+    "spacetech": {
+      "industry": "Space Technology",
+      "business_types": [
+        "Satellite software",
+        "Space mission management",
+        "Earth observation platforms",
+        "Space logistics",
+        "Aerospace manufacturing"
+      ],
+      "software_features": [
+        "Satellite operations",
+        "Mission planning",
+        "Earth observation analytics",
+        "Space traffic management",
+        "Launch operations",
+        "Ground station management"
+      ],
+      "examples": [
+        "Planet Labs",
+        "Maxar",
+        "SpaceX",
+        "Orbital Insight"
+      ],
+      "target_locations": [
+        "global",
+        "aerospace_hubs",
+        "government_sectors"
+      ]
+    },
+    "mobilitytech": {
+      "industry": "Mobility Technology",
+      "business_types": [
+        "Ride-sharing platforms",
+        "Fleet management",
+        "Autonomous vehicle software",
+        "Mobility-as-a-Service",
+        "Transportation analytics"
+      ],
+      "software_features": [
+        "Ride-sharing platforms",
+        "Fleet optimization",
+        "Route planning",
+        "Autonomous vehicle systems",
+        "Traffic management",
+        "Mobility analytics"
+      ],
+      "examples": [
+        "Uber",
+        "Lyft",
+        "Via",
+        "Waymo",
+        "Samsara"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "smart_cities"
+      ]
+    },
+    "gaming_esports": {
+      "industry": "Gaming & eSports Technology",
+      "business_types": [
+        "Game development platforms",
+        "eSports management",
+        "Gaming analytics",
+        "Live streaming platforms",
+        "Gaming monetization"
+      ],
+      "software_features": [
+        "Game development tools",
+        "Player analytics",
+        "Tournament management",
+        "Live streaming",
+        "In-game monetization",
+        "Community management"
+      ],
+      "examples": [
+        "Unity",
+        "Unreal Engine",
+        "Twitch",
+        "Discord",
+        "Riot Games"
+      ],
+      "target_locations": [
+        "global",
+        "urban",
+        "gaming_hubs"
+      ]
+    }
+  },
+  "heavy_industries": {
+    "mining_quarrying": {
+      "industry": "Mining & Quarrying",
+      "business_types": [
+        "Coal mines",
+        "Stone quarries",
+        "Sand mines",
+        "Metal ore extraction",
+        "Marble quarries",
+        "Salt mines"
+      ],
+      "software_features": [
+        "Mine planning software",
+        "Equipment tracking",
+        "Safety compliance monitoring",
+        "Geological data management",
+        "Production scheduling",
+        "Environmental impact tracking",
+        "Worker safety systems",
+        "Explosive inventory management"
+      ],
+      "examples": [
+        "MineSight",
+        "Surpac",
+        "Datamine",
+        "Hexagon Mining"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "mining_regions",
+        "rural"
+      ]
+    },
+    "oil_gas": {
+      "industry": "Oil & Gas",
+      "business_types": [
+        "Oil refineries",
+        "Gas processing plants",
+        "Petroleum distributors",
+        "Fuel stations",
+        "LPG distributors"
+      ],
+      "software_features": [
+        "Drilling operations management",
+        "Pipeline monitoring",
+        "Refinery optimization",
+        "Tank farm management",
+        "Distribution tracking",
+        "Safety compliance",
+        "Environmental monitoring",
+        "Supply chain management"
+      ],
+      "examples": [
+        "AspenTech",
+        "Honeywell",
+        "Emerson DeltaV",
+        "Schlumberger"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "coastal_regions",
+        "urban"
+      ]
+    },
+    "steel_metals": {
+      "industry": "Steel & Metals",
+      "business_types": [
+        "Steel plants",
+        "Metal foundries",
+        "Aluminum smelters",
+        "Copper processing",
+        "Scrap metal dealers"
+      ],
+      "software_features": [
+        "Furnace monitoring",
+        "Quality control systems",
+        "Metallurgical process management",
+        "Heat treatment tracking",
+        "Alloy composition management",
+        "Rolling mill optimization",
+        "Inventory tracking",
+        "Energy management"
+      ],
+      "examples": [
+        "Tenova",
+        "SMS Group",
+        "Primetals Technologies"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "manufacturing_hubs"
+      ]
+    },
+    "chemical_processing": {
+      "industry": "Chemical Processing",
+      "business_types": [
+        "Chemical plants",
+        "Pharmaceutical manufacturing",
+        "Fertilizer plants",
+        "Paint manufacturers",
+        "Polymer producers"
+      ],
+      "software_features": [
+        "Process control systems",
+        "Batch management",
+        "Recipe management",
+        "Quality assurance",
+        "Regulatory compliance",
+        "Safety management",
+        "Environmental monitoring",
+        "Supply chain tracking"
+      ],
+      "examples": [
+        "Aspen Plus",
+        "AVEVA",
+        "Yokogawa",
+        "Schneider Electric"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "chemical_hubs"
+      ]
+    }
+  },
+  "utilities_infrastructure": {
+    "water_treatment": {
+      "industry": "Water Treatment & Management",
+      "business_types": [
+        "Water treatment plants",
+        "Sewage treatment",
+        "Water distribution",
+        "Desalination plants",
+        "Water testing labs"
+      ],
+      "software_features": [
+        "Plant operations management",
+        "Water quality monitoring",
+        "Distribution network management",
+        "SCADA systems",
+        "Chemical dosing control",
+        "Leak detection",
+        "Customer billing",
+        "Regulatory reporting"
+      ],
+      "examples": [
+        "Wonderware",
+        "GE Digital",
+        "Schneider Electric",
+        "AVEVA"
+      ],
+      "target_locations": [
+        "urban",
+        "industrial_areas",
+        "municipal"
+      ]
+    },
+    "power_energy": {
+      "industry": "Power Generation & Grid Management",
+      "business_types": [
+        "Power plants",
+        "Solar farms",
+        "Wind farms",
+        "Grid operators",
+        "Energy distributors"
+      ],
+      "software_features": [
+        "Grid management",
+        "Load forecasting",
+        "Renewable energy management",
+        "Smart meter data",
+        "Outage management",
+        "Energy trading",
+        "Asset management",
+        "Predictive maintenance"
+      ],
+      "examples": [
+        "ABB",
+        "Siemens",
+        "GE Grid Solutions",
+        "Oracle Utilities"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "rural",
+        "urban"
+      ]
+    },
+    "waste_management": {
+      "industry": "Waste Management",
+      "business_types": [
+        "Waste collection companies",
+        "Recycling centers",
+        "Landfills",
+        "Hazardous waste disposal",
+        "E-waste processors"
+      ],
+      "software_features": [
+        "Route optimization",
+        "Fleet tracking",
+        "Recycling tracking",
+        "Landfill management",
+        "Environmental compliance",
+        "Customer billing",
+        "Waste categorization",
+        "Disposal scheduling"
+      ],
+      "examples": [
+        "Routeware",
+        "AMCS",
+        "Waste Logics",
+        "RecycleSmart"
+      ],
+      "target_locations": [
+        "urban",
+        "industrial_areas",
+        "municipal"
+      ]
+    },
+    "telecommunications_infrastructure": {
+      "industry": "Telecommunications Infrastructure",
+      "business_types": [
+        "Telecom operators",
+        "Tower companies",
+        "Internet service providers",
+        "Fiber optic installers",
+        "Network equipment vendors"
+      ],
+      "software_features": [
+        "Network management",
+        "Tower maintenance",
+        "Spectrum planning",
+        "Fault management",
+        "Performance monitoring",
+        "Asset tracking",
+        "Work order management",
+        "Customer service"
+      ],
+      "examples": [
+        "Nokia NetAct",
+        "Ericsson OSS",
+        "Huawei iManager",
+        "IBM Netcool"
+      ],
+      "target_locations": [
+        "urban",
+        "rural",
+        "nationwide"
+      ]
+    }
+  },
+  "specialized_manufacturing": {
+    "pharmaceutical_manufacturing": {
+      "industry": "Pharmaceutical Manufacturing",
+      "business_types": [
+        "Pharmaceutical companies",
+        "Generic drug manufacturers",
+        "Biotech companies",
+        "Medical device manufacturers",
+        "API manufacturers"
+      ],
+      "software_features": [
+        "GMP compliance",
+        "Batch records",
+        "Serialization tracking",
+        "Cold chain monitoring",
+        "Quality management",
+        "Regulatory submissions",
+        "Clinical trial management",
+        "Supply chain visibility"
+      ],
+      "examples": [
+        "Veeva",
+        "TraceLink",
+        "Sparta Systems",
+        "MasterControl"
+      ],
+      "target_locations": [
+        "pharmaceutical_hubs",
+        "industrial_areas"
+      ]
+    },
+    "food_processing": {
+      "industry": "Food Processing & Manufacturing",
+      "business_types": [
+        "Food processing plants",
+        "Beverage manufacturers",
+        "Dairy processing",
+        "Meat processing",
+        "Packaged food companies"
+      ],
+      "software_features": [
+        "HACCP compliance",
+        "Traceability systems",
+        "Allergen management",
+        "Shelf-life tracking",
+        "Recipe management",
+        "Quality control",
+        "Supply chain tracking",
+        "Nutritional analysis"
+      ],
+      "examples": [
+        "JustFood ERP",
+        "FoodLogiQ",
+        "Sage Food & Beverage",
+        "ProcessPro"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "agricultural_regions"
+      ]
+    },
+    "aerospace_manufacturing": {
+      "industry": "Aerospace Manufacturing",
+      "business_types": [
+        "Aircraft manufacturers",
+        "Aerospace component suppliers",
+        "MRO providers",
+        "Defense contractors",
+        "Space technology companies"
+      ],
+      "software_features": [
+        "Parts traceability",
+        "Certification management",
+        "Supply chain compliance",
+        "Quality assurance",
+        "Configuration management",
+        "Maintenance tracking",
+        "Regulatory compliance",
+        "Project management"
+      ],
+      "examples": [
+        "Dassault CATIA",
+        "Siemens Teamcenter",
+        "PTC Windchill",
+        "SAP Aerospace"
+      ],
+      "target_locations": [
+        "aerospace_hubs",
+        "defense_regions"
+      ]
+    },
+    "semiconductor_fabrication": {
+      "industry": "Semiconductor Fabrication",
+      "business_types": [
+        "Semiconductor fabs",
+        "Chip manufacturers",
+        "MEMS producers",
+        "Solar cell manufacturers",
+        "LED manufacturers"
+      ],
+      "software_features": [
+        "Clean room monitoring",
+        "Yield management",
+        "Equipment maintenance",
+        "Process control",
+        "Statistical process control",
+        "Defect tracking",
+        "Recipe management",
+        "Supply chain management"
+      ],
+      "examples": [
+        "Applied Materials",
+        "KLA Corporation",
+        "PDF Solutions",
+        "Rudolph Technologies"
+      ],
+      "target_locations": [
+        "semiconductor_hubs",
+        "technology_centers"
+      ]
+    },
+    "textile_apparel": {
+      "industry": "Textile & Apparel Manufacturing",
+      "business_types": [
+        "Textile mills",
+        "Garment manufacturers",
+        "Fashion brands",
+        "Fabric dyeing units",
+        "Embroidery units"
+      ],
+      "software_features": [
+        "Production planning",
+        "Fabric inventory",
+        "Color matching",
+        "Pattern management",
+        "Order tracking",
+        "Quality control",
+        "Compliance tracking",
+        "Fashion PLM"
+      ],
+      "examples": [
+        "Gerber Technology",
+        "Lectra",
+        "Optitex",
+        "BlueCherry ERP"
+      ],
+      "target_locations": [
+        "textile_hubs",
+        "manufacturing_regions"
+      ]
+    }
+  },
+  "marine_maritime": {
+    "shipping_ports": {
+      "industry": "Shipping & Port Management",
+      "business_types": [
+        "Shipping companies",
+        "Port operators",
+        "Freight forwarders",
+        "Container terminals",
+        "Logistics companies"
+      ],
+      "software_features": [
+        "Cargo tracking",
+        "Vessel scheduling",
+        "Port operations",
+        "Container management",
+        "Customs integration",
+        "Documentation management",
+        "Route optimization",
+        "Fleet management"
+      ],
+      "examples": [
+        "Navis",
+        "TOS systems",
+        "Descartes",
+        "CargoSmart"
+      ],
+      "target_locations": [
+        "coastal_regions",
+        "port_cities"
+      ]
+    },
+    "offshore_operations": {
+      "industry": "Offshore Operations",
+      "business_types": [
+        "Offshore drilling",
+        "Marine construction",
+        "Subsea services",
+        "Wind farm operators",
+        "Fisheries"
+      ],
+      "software_features": [
+        "Platform management",
+        "Marine logistics",
+        "Weather monitoring",
+        "Equipment tracking",
+        "Safety compliance",
+        "Environmental monitoring",
+        "Crew management",
+        "Maintenance scheduling"
+      ],
+      "examples": [
+        "Kongsberg Maritime",
+        "DNV GL",
+        "Weatherford",
+        "Baker Hughes"
+      ],
+      "target_locations": [
+        "coastal_regions",
+        "offshore_areas"
+      ]
+    }
+  },
+  "environmental_compliance": {
+    "environmental_monitoring": {
+      "industry": "Environmental Monitoring",
+      "business_types": [
+        "Environmental consultants",
+        "Monitoring agencies",
+        "Industrial compliance",
+        "Research institutions",
+        "Government agencies"
+      ],
+      "software_features": [
+        "Emissions tracking",
+        "Water quality monitoring",
+        "Air quality monitoring",
+        "Noise monitoring",
+        "Soil analysis",
+        "Waste tracking",
+        "Compliance reporting",
+        "Environmental impact assessment"
+      ],
+      "examples": [
+        "Enviance",
+        "Locus Technologies",
+        "ProcessMAP",
+        "ERA Environmental"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "urban",
+        "environmental_zones"
+      ]
+    },
+    "regulatory_compliance": {
+      "industry": "Regulatory Compliance Management",
+      "business_types": [
+        "Compliance consultants",
+        "Quality assurance firms",
+        "Audit firms",
+        "Certification bodies",
+        "Testing laboratories"
+      ],
+      "software_features": [
+        "ISO certification tracking",
+        "Audit management",
+        "Safety reporting",
+        "Document control",
+        "Training management",
+        "Risk assessment",
+        "Corrective action tracking",
+        "Compliance dashboard"
+      ],
+      "examples": [
+        "MetricStream",
+        "LogicGate",
+        "ServiceNow GRC",
+        "Thomson Reuters"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "corporate_sectors"
+      ]
+    }
+  },
+  "emerging_industrial_tech": {
+    "industrial_iot": {
+      "industry": "Industrial IoT Platforms",
+      "business_types": [
+        "IoT solution providers",
+        "Sensor manufacturers",
+        "System integrators",
+        "Industrial automation",
+        "Predictive maintenance"
+      ],
+      "software_features": [
+        "Sensor data management",
+        "Predictive maintenance",
+        "Asset monitoring",
+        "Real-time analytics",
+        "Machine learning integration",
+        "Edge computing",
+        "Dashboard visualization",
+        "Alert management"
+      ],
+      "examples": [
+        "PTC ThingWorx",
+        "GE Predix",
+        "Siemens MindSphere",
+        "Microsoft Azure IoT"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "smart_factories"
+      ]
+    },
+    "digital_twin": {
+      "industry": "Digital Twin Software",
+      "business_types": [
+        "Digital twin providers",
+        "Simulation companies",
+        "Engineering services",
+        "Manufacturing optimization",
+        "Asset management"
+      ],
+      "software_features": [
+        "Virtual factory modeling",
+        "Simulation platforms",
+        "Real-time synchronization",
+        "Performance optimization",
+        "Scenario testing",
+        "Predictive analytics",
+        "3D visualization",
+        "Integration APIs"
+      ],
+      "examples": [
+        "ANSYS Twin Builder",
+        "Bentley iTwin",
+        "Dassault 3DEXPERIENCE",
+        "Unity Reflect"
+      ],
+      "target_locations": [
+        "technology_hubs",
+        "industrial_areas"
+      ]
+    },
+    "additive_manufacturing": {
+      "industry": "Additive Manufacturing (3D Printing)",
+      "business_types": [
+        "3D printing services",
+        "Rapid prototyping",
+        "Custom manufacturing",
+        "Medical implants",
+        "Aerospace parts"
+      ],
+      "software_features": [
+        "3D printing workflow",
+        "Material tracking",
+        "Quality control",
+        "Design optimization",
+        "Post-processing management",
+        "Cost calculation",
+        "Order management",
+        "Print scheduling"
+      ],
+      "examples": [
+        "Materialise",
+        "3D Systems",
+        "Stratasys",
+        "Formlabs"
+      ],
+      "target_locations": [
+        "manufacturing_hubs",
+        "technology_centers"
+      ]
+    },
+    "robotics_automation": {
+      "industry": "Robotics & Industrial Automation",
+      "business_types": [
+        "Robotics companies",
+        "Automation integrators",
+        "Manufacturing automation",
+        "Warehouse automation",
+        "Process automation"
+      ],
+      "software_features": [
+        "Robot programming",
+        "Path planning",
+        "Vision systems",
+        "Safety systems",
+        "Fleet management",
+        "Process optimization",
+        "Human-robot collaboration",
+        "Maintenance scheduling"
+      ],
+      "examples": [
+        "ABB RobotStudio",
+        "KUKA",
+        "Fanuc",
+        "Universal Robots"
+      ],
+      "target_locations": [
+        "manufacturing_hubs",
+        "industrial_areas"
+      ]
+    }
+  },
+  "niche_industries": {
+    "gaming_simulation": {
+      "industry": "Gaming & Simulation",
+      "business_types": [
+        "Game development studios",
+        "Simulation software",
+        "Training simulators",
+        "VR/AR development",
+        "Educational games"
+      ],
+      "software_features": [
+        "Game engines",
+        "Physics simulation",
+        "Rendering systems",
+        "AI behavior",
+        "Multiplayer networking",
+        "Content management",
+        "Analytics tracking",
+        "Monetization systems"
+      ],
+      "examples": [
+        "Unity",
+        "Unreal Engine",
+        "CryEngine",
+        "Godot"
+      ],
+      "target_locations": [
+        "technology_hubs",
+        "creative_centers"
+      ]
+    },
+    "quantum_computing": {
+      "industry": "Quantum Computing",
+      "business_types": [
+        "Quantum hardware companies",
+        "Quantum software developers",
+        "Research institutions",
+        "Cloud quantum services",
+        "Quantum consulting"
+      ],
+      "software_features": [
+        "Quantum circuit design",
+        "Quantum algorithms",
+        "Error correction",
+        "Quantum simulation",
+        "Hybrid computing",
+        "Quantum networking",
+        "Cryptography",
+        "Optimization algorithms"
+      ],
+      "examples": [
+        "IBM Qiskit",
+        "Google Cirq",
+        "Microsoft Q#",
+        "Rigetti Forest"
+      ],
+      "target_locations": [
+        "research_centers",
+        "technology_hubs"
+      ]
+    },
+    "blockchain_web3": {
+      "industry": "Blockchain & Web3",
+      "business_types": [
+        "Blockchain developers",
+        "Cryptocurrency exchanges",
+        "DeFi platforms",
+        "NFT marketplaces",
+        "Smart contract auditors"
+      ],
+      "software_features": [
+        "Smart contract development",
+        "DeFi protocols",
+        "Wallet integration",
+        "Cross-chain bridges",
+        "Governance systems",
+        "Tokenomics",
+        "Security auditing",
+        "Analytics platforms"
+      ],
+      "examples": [
+        "Ethereum",
+        "Solana",
+        "Polygon",
+        "Chainlink"
+      ],
+      "target_locations": [
+        "global",
+        "crypto_hubs"
+      ]
+    },
+    "cleantech_climate": {
+      "industry": "CleanTech & Climate Solutions",
+      "business_types": [
+        "Renewable energy",
+        "Carbon capture",
+        "Energy storage",
+        "Electric vehicles",
+        "Green building"
+      ],
+      "software_features": [
+        "Energy management",
+        "Carbon tracking",
+        "Renewable forecasting",
+        "Grid optimization",
+        "Battery management",
+        "Emissions monitoring",
+        "Sustainability reporting",
+        "Green finance"
+      ],
+      "examples": [
+        "Tesla Energy",
+        "Stem",
+        "AutoGrid",
+        "CarbonChain"
+      ],
+      "target_locations": [
+        "renewable_energy_zones",
+        "urban"
+      ]
+    },
+    "precision_agriculture": {
+      "industry": "Precision Agriculture",
+      "business_types": [
+        "AgTech companies",
+        "Drone services",
+        "Soil testing",
+        "Crop monitoring",
+        "Livestock tracking"
+      ],
+      "software_features": [
+        "Crop monitoring",
+        "Soil analysis",
+        "Weather integration",
+        "Irrigation management",
+        "Pest detection",
+        "Yield prediction",
+        "Farm management",
+        "Supply chain tracking"
+      ],
+      "examples": [
+        "John Deere Operations Center",
+        "Climate FieldView",
+        "Granular",
+        "FarmLogs"
+      ],
+      "target_locations": [
+        "agricultural_regions",
+        "rural"
+      ]
+    },
+    "nuclear_energy": {
+      "industry": "Nuclear Energy",
+      "business_types": [
+        "Nuclear power plants",
+        "Nuclear fuel suppliers",
+        "Decommissioning services",
+        "Nuclear waste management",
+        "Reactor manufacturers"
+      ],
+      "software_features": [
+        "Reactor monitoring",
+        "Safety systems",
+        "Radiation monitoring",
+        "Fuel management",
+        "Maintenance scheduling",
+        "Regulatory compliance",
+        "Emergency response",
+        "Waste tracking"
+      ],
+      "examples": [
+        "Westinghouse",
+        "GE Hitachi",
+        "Framatome",
+        "AREVA"
+      ],
+      "target_locations": [
+        "nuclear_facilities",
+        "industrial_areas"
+      ]
+    },
+    "space_satellite": {
+      "industry": "Space & Satellite Technology",
+      "business_types": [
+        "Satellite operators",
+        "Launch services",
+        "Ground stations",
+        "Space manufacturing",
+        "Satellite data services"
+      ],
+      "software_features": [
+        "Satellite operations",
+        "Mission planning",
+        "Earth observation analytics",
+        "Ground station management",
+        "Launch operations",
+        "Orbit determination",
+        "Data processing",
+        "Space traffic management"
+      ],
+      "examples": [
+        "Planet Labs",
+        "Maxar",
+        "Spire",
+        "Orbital Insight"
+      ],
+      "target_locations": [
+        "aerospace_hubs",
+        "satellite_facilities"
+      ]
+    },
+    "cybersecurity_industrial": {
+      "industry": "Industrial Cybersecurity",
+      "business_types": [
+        "OT security",
+        "SCADA security",
+        "Industrial firewalls",
+        "Security consulting",
+        "Incident response"
+      ],
+      "software_features": [
+        "OT network monitoring",
+        "Anomaly detection",
+        "Threat intelligence",
+        "Incident response",
+        "Compliance reporting",
+        "Vulnerability assessment",
+        "Security orchestration",
+        "Risk management"
+      ],
+      "examples": [
+        "Dragos",
+        "Claroty",
+        "Armis",
+        "Nozomi Networks"
+      ],
+      "target_locations": [
+        "industrial_areas",
+        "critical_infrastructure"
+      ]
+    }
+  },
+  "specialized_tools": {
+    "category": "Additional Business Tools",
+    "description": "Optional but valuable tools for business enhancement",
+    "tools": [
+      {
+        "name": "WhatsApp Business API tools",
+        "purpose": "Customer reminders, promotions",
+        "target_businesses": "All"
+      },
+      {
+        "name": "Email Marketing Software",
+        "examples": [
+          "Mailchimp",
+          "ConvertKit"
+        ],
+        "target_businesses": "Medium to Large"
+      },
+      {
+        "name": "Digital Signature & Document tools",
+        "examples": [
+          "DocuSign"
+        ],
+        "target_businesses": "Professional services"
+      },
+      {
+        "name": "Online Store Builder",
+        "examples": [
+          "Dukaan",
+          "Shopify",
+          "Wix"
+        ],
+        "target_businesses": "Retail, E-commerce"
+      },
+      {
+        "name": "Mobile App Builders",
+        "purpose": "Customer ordering & engagement",
+        "target_businesses": "Customer-facing businesses"
+      }
+    ]
+  },
+  "business_scale_categories": {
+    "micro_businesses": {
+      "description": "Street vendors, home-based businesses, individual service providers",
+      "typical_software_needs": [
+        "Simple billing",
+        "Customer database",
+        "WhatsApp integration",
+        "Basic inventory"
+      ],
+      "budget_range": "₹0-₹500/month"
+    },
+    "small_businesses": {
+      "description": "Local shops, small restaurants, single-location services",
+      "typical_software_needs": [
+        "POS systems",
+        "Basic CRM",
+        "Inventory management",
+        "Accounting software"
+      ],
+      "budget_range": "₹500-₹5000/month"
+    },
+    "medium_businesses": {
+      "description": "Multi-location businesses, manufacturing units, established services",
+      "typical_software_needs": [
+        "ERP systems",
+        "Advanced CRM",
+        "Project management",
+        "HR systems"
+      ],
+      "budget_range": "₹5000-₹50000/month"
+    },
+    "large_enterprises": {
+      "description": "Corporations, large manufacturing, multi-city operations",
+      "typical_software_needs": [
+        "Enterprise ERP",
+        "Advanced analytics",
+        "Multi-module integration",
+        "Custom solutions"
+      ],
+      "budget_range": "₹50000+/month"
+    }
+  },
+  "market_insights": {
+    "untapped_markets": [
+      "Street vendors and cart sellers",
+      "Rural agricultural services",
+      "Local religious services",
+      "Home-based food businesses",
+      "Traditional craftsmen and artisans",
+      "Micro-influencers and content creators",
+      "Community-based social enterprises",
+      "Indigenous and traditional businesses",
+      "Small-scale mining operations",
+      "Local waste collectors",
+      "Village-level water management",
+      "Tribal and indigenous crafts"
+    ],
+    "high_growth_sectors": [
+      "AI & Machine Learning platforms",
+      "Blockchain & Web3 technologies",
+      "CleanTech & Climate solutions",
+      "FinTech & DeFi platforms",
+      "HealthTech & Telemedicine",
+      "EdTech & Remote learning",
+      "FoodTech & Alternative proteins",
+      "MobilityTech & Autonomous systems",
+      "SpaceTech & Satellite services",
+      "Cybersecurity solutions",
+      "Industrial IoT & Industry 4.0",
+      "Quantum computing applications",
+      "Carbon capture & storage",
+      "Precision agriculture",
+      "Nuclear fusion technology"
+    ],
+    "emerging_tech_categories": [
+      "Quantum computing applications",
+      "Extended Reality (AR/VR/MR)",
+      "Internet of Things (IoT) platforms",
+      "Edge computing solutions",
+      "Digital twins technology",
+      "Robotic process automation",
+      "Voice technology and conversational AI",
+      "Autonomous systems and robotics",
+      "Brain-computer interfaces",
+      "Synthetic biology platforms",
+      "Nanotechnology applications",
+      "6G networking infrastructure",
+      "Holographic displays",
+      "Neuromorphic computing"
+    ],
+    "geographic_opportunities": {
+      "developing_markets": [
+        "India",
+        "Southeast Asia",
+        "Africa",
+        "Latin America",
+        "Eastern Europe"
+      ],
+      "emerging_tech_hubs": [
+        "Singapore",
+        "Dubai",
+        "Tel Aviv",
+        "Toronto",
+        "Berlin",
+        "Bangalore",
+        "Shenzhen"
+      ],
+      "regulation_friendly": [
+        "Estonia",
+        "Switzerland",
+        "UAE",
+        "Singapore",
+        "Denmark"
+      ],
+      "industrial_corridors": [
+        "Gujarat",
+        "Tamil Nadu",
+        "Maharashtra",
+        "Karnataka",
+        "Andhra Pradesh"
+      ]
+    },
+    "digital_adoption_challenges": [
+      "Language barriers and localization",
+      "Low digital literacy in rural areas",
+      "Cost sensitivity in emerging markets",
+      "Internet connectivity issues",
+      "Resistance to change in traditional industries",
+      "Regulatory compliance complexity",
+      "Data privacy and security concerns",
+      "Integration with legacy systems",
+      "Skills shortage in emerging technologies",
+      "Infrastructure limitations",
+      "Cybersecurity concerns in industrial settings"
+    ],
+    "investment_trends_2025": {
+      "hot_sectors": [
+        "AI/ML",
+        "Climate Tech",
+        "FinTech",
+        "HealthTech",
+        "SpaceTech",
+        "Industrial IoT",
+        "Cybersecurity"
+      ],
+      "declining_interest": [
+        "Generic SaaS",
+        "Basic e-commerce",
+        "Simple mobile apps",
+        "Traditional retail tech"
+      ],
+      "funding_focus": [
+        "B2B solutions",
+        "Enterprise software",
+        "Deep tech",
+        "Hardware-software integration",
+        "Climate solutions"
+      ],
+      "mega_trends": [
+        "Sustainability",
+        "Automation",
+        "Decentralization",
+        "Personalization",
+        "Resilience"
+      ]
     }
   }
 }

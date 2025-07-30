@@ -1,115 +1,247 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Globe2, Zap, DollarSign } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { TrendingUp, Globe2, Zap, DollarSign, BarChart3, Users, ArrowUpRight, Github, ExternalLink } from "lucide-react";
+
+import businessData from "@/data/business-software.json";
 
 const AnalyticsSection = () => {
-  const growthSectors = [
-    { name: "FinTech", growth: "+156%", icon: DollarSign, trend: "Very High" },
-    { name: "HealthTech", growth: "+134%", icon: Zap, trend: "Very High" },
-    { name: "EdTech", growth: "+89%", icon: Globe2, trend: "High" },
-    { name: "CleanTech", growth: "+78%", icon: TrendingUp, trend: "High" },
-  ];
+  // Extract data from JSON
+  const { market_insights } = businessData;
 
-  const marketInsights = [
-    "Street vendors and cart sellers represent an untapped market",
-    "Rural agricultural services show high potential",
-    "AI & ML platforms experiencing explosive growth",
-    "Blockchain & Web3 technologies gaining momentum"
-  ];
+  // Map high growth sectors with icons and descriptions
+  const growthSectors = market_insights.high_growth_sectors.map((sector, index) => {
+    const iconMap: { [key: string]: any } = {
+      "AI & Machine Learning platforms": { icon: Zap, description: "Intelligent automation & analytics", growth: "+189%" },
+      "FinTech & DeFi platforms": { icon: DollarSign, description: "Digital payments & finance", growth: "+156%" },
+      "HealthTech & Telemedicine": { icon: Globe2, description: "Remote healthcare & wellness tech", growth: "+134%" },
+      "CleanTech & Climate solutions": { icon: TrendingUp, description: "Renewable energy & sustainability", growth: "+98%" },
+      "EdTech & Remote learning": { icon: Globe2, description: "Online education & skill development", growth: "+87%" },
+      "Cybersecurity solutions": { icon: Zap, description: "Data protection & threat intelligence", growth: "+76%" },
+      "MobilityTech & Autonomous systems": { icon: TrendingUp, description: "Smart transportation & logistics", growth: "+65%" },
+      "SpaceTech & Satellite services": { icon: Globe2, description: "Space infrastructure & communications", growth: "+54%" }
+    };
+
+    const sectorData = iconMap[sector] || {
+      icon: TrendingUp,
+      description: "Emerging technology sector",
+      growth: "+50%"
+    };
+
+    return {
+      name: sector.split(' &')[0], // Shorten names for display
+      growth: sectorData.growth,
+      icon: sectorData.icon,
+      trend: "Very High",
+      description: sectorData.description
+    };
+  });
+
 
   const getTrendColor = (trend: string) => {
     switch (trend) {
       case "Very High":
-        return "bg-green-500/20 text-green-400 border-green-500/30";
+        return "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
       case "High":
-        return "bg-blue-500/20 text-blue-400 border-blue-500/30";
+        return "bg-blue-500/10 text-blue-400 border-blue-500/20";
+      case "High Growth":
+        return "bg-blue-500/10 text-blue-400 border-blue-500/20";
+      case "Emerging":
+        return "bg-purple-500/10 text-purple-400 border-purple-500/20";
       default:
-        return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
+        return "bg-yellow-500/10 text-yellow-400 border-yellow-500/20";
     }
   };
 
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Market Analytics & <span className="bg-gradient-primary bg-clip-text text-transparent">Growth Trends</span>
+    <section className="py-20 px-4 bg-gradient-to-br from-background to-card/20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+
+      <div className="container mx-auto relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <BarChart3 className="h-4 w-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Market Intelligence</span>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            Industry Analytics &
+            <span className="text-gradient-primary"> Growth Trends</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Data-driven insights into the fastest-growing business software sectors and emerging opportunities.
+
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Data-driven insights into the fastest-growing business software sectors and emerging market opportunities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Growth Sectors */}
-          <Card className="p-8 bg-gradient-card border-border shadow-card">
-            <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center">
-              <TrendingUp className="h-5 w-5 mr-2 text-primary" />
-              High Growth Sectors 2025
-            </h3>
-            <div className="space-y-4">
-              {growthSectors.map((sector, index) => {
-                const IconComponent = sector.icon;
-                return (
-                  <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-background/50 border border-border hover:border-primary/30 transition-colors">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <IconComponent className="h-4 w-4 text-primary" />
+        <div className="grid grid-cols-1 gap-8 mb-12">
+          {/* High Growth Sectors */}
+          <Card className="p-8 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl" />
+
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <TrendingUp className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">High Growth Sectors 2025</h3>
+                  <p className="text-sm text-muted-foreground">Top {growthSectors.length} fastest growing industries</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {growthSectors.map((sector, index) => {
+                  const IconComponent = sector.icon;
+                  return (
+                    <div key={index} className="group p-4 rounded-xl bg-background/50 border border-border/50 hover:border-primary/30 transition-all duration-200 hover:bg-background/80">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-gradient-primary">
+                            <IconComponent className="h-4 w-4 text-white" />
+                          </div>
+                          <div>
+                            <div className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                              {sector.name}
+                            </div>
+                            <div className="text-sm text-muted-foreground">
+                              {sector.description}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-primary">{sector.growth}</div>
+                          </div>
+                          <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </div>
                       </div>
-                      <span className="font-medium text-foreground">{sector.name}</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <span className="text-primary font-semibold">{sector.growth}</span>
-                      <Badge className={`${getTrendColor(sector.trend)} border text-xs`}>
-                        {sector.trend}
-                      </Badge>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Additional Data Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* Emerging Technologies */}
+          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-purple-500/10">
+                <Zap className="h-4 w-4 text-purple-400" />
+              </div>
+              <h4 className="font-semibold text-foreground">Emerging Tech</h4>
+            </div>
+            <div className="text-2xl font-bold text-purple-400 mb-2">
+              {market_insights.emerging_tech_categories.length}+
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Next-gen technologies including {market_insights.emerging_tech_categories.slice(0, 2).join(", ")}
+            </p>
+          </Card>
+
+          {/* Geographic Markets */}
+          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-blue-500/10">
+                <Globe2 className="h-4 w-4 text-blue-400" />
+              </div>
+              <h4 className="font-semibold text-foreground">Global Markets</h4>
+            </div>
+            <div className="text-2xl font-bold text-blue-400 mb-2">
+              {market_insights.geographic_opportunities.developing_markets.length}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              High-potential markets: {market_insights.geographic_opportunities.developing_markets.slice(0, 2).join(", ")}
+            </p>
+          </Card>
+
+          {/* Business Categories */}
+          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-yellow-500/10">
+                <BarChart3 className="h-4 w-4 text-yellow-400" />
+              </div>
+              <h4 className="font-semibold text-foreground">Business Scales</h4>
+            </div>
+            <div className="text-2xl font-bold text-yellow-400 mb-2">
+              4
+            </div>
+            <p className="text-sm text-muted-foreground">
+              From micro businesses to large enterprises
+            </p>
+          </Card>
+        </div>
+
+        {/* Detailed Breakdown */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Untapped Markets Detail */}
+          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">🎯</span>
+              <h4 className="font-semibold text-foreground">Untapped Opportunities</h4>
+            </div>
+            <div className="flex max-md:flex-col md:flex-wrap gap-4">
+              {market_insights.untapped_markets.map((market, index) => (
+                <div key={index} className="flex items-center gap-3 p-2 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
+                  <div className="w-2 h-2 rounded-full bg-primary" />
+                  <span className="text-sm text-foreground capitalize">{market}</span>
+                </div>
+              ))}
             </div>
           </Card>
 
-          {/* Market Insights */}
-          <Card className="p-8 bg-gradient-card border-border shadow-card">
-            <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center">
-              <Globe2 className="h-5 w-5 mr-2 text-primary" />
-              Market Insights
-            </h3>
-            <div className="space-y-4">
-              {marketInsights.map((insight, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 rounded-xl bg-background/50 border border-border">
-                  <div className="h-2 w-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-sm leading-relaxed">{insight}</p>
+          {/* Challenges & Solutions */}
+          <Card className="p-6 bg-gradient-card border-border/50 hover:shadow-card-hover transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">⚡</span>
+              <h4 className="font-semibold text-foreground">Key Challenges</h4>
+            </div>
+            <div className="flex max-md:flex-col md:flex-wrap gap-4">
+              {market_insights.digital_adoption_challenges.map((challenge, index) => (
+                <div key={index} className="flex items-start gap-3 p-2 rounded-lg bg-background/30 hover:bg-background/50 transition-colors">
+                  <div className="w-2 h-2 rounded-full bg-orange-400 mt-1.5 flex-shrink-0" />
+                  <span className="text-sm text-foreground leading-relaxed">{challenge}</span>
                 </div>
               ))}
             </div>
           </Card>
         </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Card className="inline-block p-6 bg-gradient-card border-border shadow-card">
-            <p className="text-muted-foreground mb-4">
-              Want to contribute market data or add your industry insights?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button 
-                className="px-6 py-2 bg-gradient-primary text-white rounded-lg hover:opacity-90 transition-opacity"
-                onClick={() => window.open('https://github.com', '_blank')}
-              >
-                Add Industry Data
-              </button>
-              <button 
-                className="px-6 py-2 border border-border text-foreground hover:bg-card rounded-lg transition-colors"
-                onClick={() => window.open('https://github.com', '_blank')}
-              >
-                View on GitHub
-              </button>
-            </div>
-          </Card>
-        </div>
       </div>
+
+      {/* CTA Section */}
+      <Card className="p-8 bg-gradient-to-r from-primary/5 via-background to-accent/5 border-border/50 text-center">
+        <div className="max-w-2xl mx-auto">
+          <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-foreground mb-4">
+            Join the Community
+          </h3>
+          <p className="text-muted-foreground mb-6 leading-relaxed">
+            Want to contribute market data, add your industry insights, or help improve this directory?
+            Join our growing community of contributors.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              className="bg-gradient-primary hover:opacity-90 text-white font-medium px-6 py-3 group"
+              onClick={() => window.open('https://github.com', '_blank')}
+            >
+              <Github className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform" />
+              Contribute on GitHub
+              <ExternalLink className="h-3 w-3 ml-2 opacity-60" />
+            </Button>
+            <Button
+              variant="outline"
+              className="border-border/50 hover:bg-card hover:border-primary/30 px-6 py-3"
+              onClick={() => window.open('https://github.com', '_blank')}
+            >
+              Add Industry Data
+            </Button>
+          </div>
+        </div>
+      </Card>
     </section>
   );
 };
