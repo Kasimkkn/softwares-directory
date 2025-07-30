@@ -30,7 +30,7 @@ const IndustryCard = ({ industry, onClick }: IndustryCardProps) => {
 
   return (
     <Card 
-      className="p-6 bg-gradient-card border-border hover:shadow-card-hover transition-all duration-300 cursor-pointer group hover:border-primary/30"
+      className="p-6 bg-gradient-card border-border hover:shadow-card-hover transition-all duration-300 cursor-pointer group hover:border-primary/30 hover:-translate-y-1 will-change-transform"
       onClick={onClick}
     >
       <div className="space-y-4">

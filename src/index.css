@@ -8,23 +8,23 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Business Software Directory Design System */
-    --background: 220 27% 11%; /* #1c1c1c */
+    /* Mandatory Color Scheme */
+    --background: 0 0% 11%; /* #1c1c1c */
     --foreground: 0 0% 100%; /* white */
 
-    --card: 220 10% 15%; /* #272725 */
+    --card: 0 0% 15.3%; /* #272725 */
     --card-foreground: 0 0% 100%;
 
-    --popover: 220 10% 15%;
+    --popover: 0 0% 15.3%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 142 76% 36%; /* Modern green accent */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 10% 15%;
+    --secondary: 0 0% 15.3%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 10% 15%;
+    --muted: 0 0% 15.3%;
     --muted-foreground: 0 0% 70%;
 
     --accent: 262 83% 58%; /* Purple accent */
@@ -33,18 +33,19 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 25%;
-    --input: 220 10% 20%;
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
     --ring: 142 76% 36%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
+    /* Performance & Animation tokens */
     --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(262 83% 58%));
-    --gradient-card: linear-gradient(145deg, hsl(220 10% 15%), hsl(220 10% 18%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 15.3%), hsl(0 0% 18%));
     --shadow-glow: 0 0 40px hsl(142 76% 36% / 0.15);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
     --sidebar-background: 0 0% 98%;
 
@@ -107,7 +108,54 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Skeleton loader animations */
+  @keyframes skeleton-loading {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--card)) 50%, hsl(var(--muted)) 75%);
+    background-size: 200px 100%;
+    animation: skeleton-loading 1.5s infinite;
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Smooth scrolling with Lenis */
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
   }
 }

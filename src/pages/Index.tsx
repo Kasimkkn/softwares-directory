@@ -6,11 +6,17 @@ import FilterSidebar from "@/components/FilterSidebar";
 import IndustryCard from "@/components/IndustryCard";
 import IndustryModal from "@/components/IndustryModal";
 import Footer from "@/components/Footer";
+import { IndustryGridSkeleton } from "@/components/SkeletonLoaders";
+import useLenis from "@/hooks/useLenis";
 import businessData from "@/data/business-software.json";
 
 const Index = () => {
+  // Initialize smooth scrolling
+  useLenis();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
     growthPotential: [] as string[],
     locations: [] as string[],
@@ -22,6 +28,26 @@ const Index = () => {
     return Object.values(businessData.industry_specific_software);
   }, []);
 
+  // Generate search suggestions
+  const searchSuggestions = useMemo(() => {
+    const suggestions = new Set<string>();
+    
+    // Add industry names
+    industries.forEach(industry => {
+      suggestions.add(industry.industry);
+      // Add business types
+      industry.business_types.forEach(type => suggestions.add(type));
+      // Add software features (first few words only)
+      industry.software_features.forEach(feature => {
+        const shortFeature = feature.split(' ').slice(0, 3).join(' ');
+        if (shortFeature.length > 5) suggestions.add(shortFeature);
+      });
+      // Add examples
+      industry.examples.forEach(example => suggestions.add(example));
+    });
+
+    return Array.from(suggestions).sort();
+  }, [industries]);
   // Extract filter options
   const filterOptions = useMemo(() => {
     const growthPotentials = [...new Set(industries.map(ind => ind.growth_potential).filter(Boolean))];
@@ -87,7 +113,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+      <Header 
+        searchQuery={searchQuery} 
+        onSearchChange={setSearchQuery} 
+        searchSuggestions={searchSuggestions}
+      />
 
       {/* Hero Section */}
       <HeroSection 
@@ -119,7 +149,9 @@ const Index = () => {
               </p>
             </div>
 
-            {filteredIndustries.length > 0 ? (
+            {isLoading ? (
+              <IndustryGridSkeleton count={6} />
+            ) : filteredIndustries.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredIndustries.map((industry, index) => (
                   <IndustryCard
@@ -138,12 +170,21 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Try adjusting your search or filters to find more results.
                   </p>
-                  <button
-                    onClick={handleClearFilters}
-                    className="text-primary hover:underline"
-                  >
-                    Clear all filters
-                  </button>
+                  <div className="space-y-2">
+                    <button
+                      onClick={handleClearFilters}
+                      className="text-primary hover:underline block mx-auto"
+                    >
+                      Clear all filters
+                    </button>
+                    <p className="text-sm text-muted-foreground">or</p>
+                    <button
+                      onClick={() => window.open('https://github.com', '_blank')}
+                      className="text-primary hover:underline"
+                    >
+                      Contribute this industry to our database
+                    </button>
+                  </div>
                 </div>
               </div>
             )}

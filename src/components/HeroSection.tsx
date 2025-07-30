@@ -54,7 +54,7 @@ const HeroSection = ({ totalIndustries, totalCategories }: HeroSectionProps) => 
             return (
               <div 
                 key={index}
-                className="p-6 rounded-2xl bg-gradient-card border border-border shadow-card hover:shadow-card-hover transition-all duration-300 group"
+                className="p-6 rounded-2xl bg-gradient-card border border-border shadow-card hover:shadow-card-hover transition-all duration-300 group hover:-translate-y-1 will-change-transform"
               >
                 <div className="flex flex-col items-center space-y-3">
                   <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">

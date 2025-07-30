@@ -2,6 +2,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import ShareButton from "./ShareButton";
 import { 
   Building2, 
   MapPin, 
@@ -49,12 +50,15 @@ const IndustryModal = ({ industry, isOpen, onClose }: IndustryModalProps) => {
             <DialogTitle className="text-2xl font-bold text-foreground">
               {industry.industry}
             </DialogTitle>
-            {industry.growth_potential && (
-              <Badge className={`${getGrowthColor(industry.growth_potential)} border`}>
-                <TrendingUp className="h-3 w-3 mr-1" />
-                {industry.growth_potential} Growth
-              </Badge>
-            )}
+            <div className="flex items-center space-x-2">
+              <ShareButton industryName={industry.industry} />
+              {industry.growth_potential && (
+                <Badge className={`${getGrowthColor(industry.growth_potential)} border`}>
+                  <TrendingUp className="h-3 w-3 mr-1" />
+                  {industry.growth_potential} Growth
+                </Badge>
+              )}
+            </div>
           </div>
         </DialogHeader>
 
